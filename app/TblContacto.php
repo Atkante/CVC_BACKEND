@@ -6,18 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-class TblProducto extends Model
+
+class TblContacto extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
-    protected $table = 'tbl_productos';
+    protected $table = 'tbl_contactos';
     protected $fillable = [
         'id',
         'nombre',
-        'imagen',
-        'descripcion',
-        'idCategoria',
-        'precioAlMayor',
-        'precioAlMenor'
+        'asunto',
+        'mensaje',
+ 
     ];
     public $timestamps = false;
 }
